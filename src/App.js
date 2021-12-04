@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import Board from './Board.js';
 
-function App() {
+const App = () => {
+  const numberList = [1,2,3,4,5,6,7,8];
+  const [cards, setCards] = useState([]);
+
+  useEffect( () => {
+    setCards(numberList.map( number => ({number}) ));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="text-center font-text">MEMOTEST</h1>
+    <Board cards={cards}/>
     </div>
   );
 }
