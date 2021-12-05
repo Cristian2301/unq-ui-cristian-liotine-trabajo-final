@@ -1,4 +1,4 @@
-import './App.css';
+import './Board.css';
 import Card from './Card.js';
 
 const Board = ({cards}) => {
