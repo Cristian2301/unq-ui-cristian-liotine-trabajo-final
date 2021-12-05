@@ -1,12 +1,13 @@
 
 const Card = ({card}) => (
-          <div>
-             {/* <div className="front_card">
-             </div> */}
-            <div className="back_card">
-                {card.number}
+        <div className={`${card.turnedAround && 'card_turned_around'}`}>
+            <div className="card">
+                <div className="back_card">
+                    {card.number}
+                </div>
             </div>
         </div>
+    </div>
 )
 
 export default Card;

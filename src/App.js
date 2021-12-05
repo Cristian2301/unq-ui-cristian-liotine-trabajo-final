@@ -7,13 +7,13 @@ const App = () => {
   const [cards, setCards] = useState([]);
 
   useEffect( () => {
-    setCards(numberList.map( number => ({number}) ));
+    setCards(numberList.map( number => ({number, turnedAround: false}) ));
   }, []);
 
   return (
     <div>
       <h1 className="text-center font-text">MEMOTEST</h1>
-    <Board cards={cards}/>
+      <Board cards={cards}/>
     </div>
   );
 }
