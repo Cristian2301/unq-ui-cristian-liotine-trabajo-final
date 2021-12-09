@@ -3,11 +3,19 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
-  .game-over{
+  .game-ended{
     text-align: center;
     padding-top: 10%;
   }
   
   .slidedown {
     cursor: pointer;
+  }
+
+  .score {
+    padding-left: 80%;
+  }
+
+  .player {
+    color: red;
   }

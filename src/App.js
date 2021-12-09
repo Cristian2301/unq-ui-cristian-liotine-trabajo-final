@@ -1,13 +1,13 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Memotest from './Memotest';
-import GameOver from './GameOver';
+import GameEnded from './GameEnded';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={< Memotest />} />
-        <Route path="/GameOver" element={< GameOver />} />
+        <Route path="/GameEnded" element={< GameEnded />} />
       </Routes>
     </BrowserRouter>
   )

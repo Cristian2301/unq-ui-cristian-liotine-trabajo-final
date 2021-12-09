@@ -2,13 +2,13 @@ import './Board.css';
 import Card from './Card.js';
 import { useNavigate } from 'react-router-dom';
 
-const Board = ({cards, animating, handleCardClick, gameFinished}) => {
+const Board = ({cards, animating, handleCardClick, gameFinished, winner}) => {
     const navigate = useNavigate();
     const dimention = cards.length;
 
-    const gameOver = () => {
+    const gameEnded = () => {
         if(gameFinished) {
-            navigate("/GameOver");
+            navigate("/GameEnded", {state: { playerWinner: winner } });
         }
     }
 
@@ -28,16 +28,19 @@ const Board = ({cards, animating, handleCardClick, gameFinished}) => {
         if(dimention === 32) {
             return 'board_dimention_4x8'
         }
+        if(dimention === 36) {
+            return 'board_dimention_6x6'
+        }
     }
 
     return (
         <div>
             <div className= {`board ${ dimentionBoard() }`}>
                 {cards.map( (card) => {
-                    return <Card animating={animating} handleCardClick={handleCardClick} card={card} gameFinished={gameFinished} />
+                    return <Card animating={animating} handleCardClick={handleCardClick} card={card} />
                 })}
             </div>
-            {gameOver()}
+            {gameEnded()}
         </div>
     );
 }
