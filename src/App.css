@@ -2,18 +2,6 @@
   text-align: center;
 }
 
-.font-text{
-  color: red;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.game-over{
-  text-align: center;
-  padding-top: 10%;
-}
-
-
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;

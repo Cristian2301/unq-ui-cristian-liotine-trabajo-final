@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import App from './App.css';
+import Memotest from './Memotest.css';
 
 const GameOver = () => {
     const navigate = useNavigate();

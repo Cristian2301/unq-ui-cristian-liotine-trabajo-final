@@ -1,7 +1,26 @@
 .board {
-    grid-template-columns: repeat(4, 1fr);
     max-width: 600px;
     margin: 100px auto;
     display: grid;
     grid-gap: 10px;
+}
+
+.board_dimention_4x4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.board_dimention_4x5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.board_dimention_4x6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.board_dimention_4x7 {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.board_dimention_4x8 {
+    grid-template-columns: repeat(8, 1fr);
 }
